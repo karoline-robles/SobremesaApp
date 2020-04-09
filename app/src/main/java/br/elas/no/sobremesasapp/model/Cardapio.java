@@ -1,5 +1,4 @@
 package br.elas.no.sobremesasapp.model;
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -56,3 +55,4 @@ public class Cardapio implements Parcelable {
         dest.writeInt(imagemPrato);
     }
 }
+

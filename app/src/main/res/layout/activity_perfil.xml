@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.elas.no.sobremesasapp.view.P">
+    tools:context=".view.PerfilActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textNomeProfile"
@@ -81,7 +81,7 @@
             style="@style/texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/confirmar_senha"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:textColor="@color/azul"
             android:text="@string/senha" />

@@ -2,41 +2,59 @@ package br.elas.no.sobremesasapp.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Sobremesa implements Parcelable{
-    private String nomeSobremesa;
-    private String enderecoSobremesa;
-    private String horarioSobremesa;
-    private int imagemSobremesa;
 
-    public Sobremesa(String nomeSobremesa, String enderecoSobremesa, String horarioSobremesa, int imagemSobremesa) {
-        this.nomeSobremesa = nomeSobremesa;
-        this.enderecoSobremesa = enderecoSobremesa;
-        this.horarioSobremesa = horarioSobremesa;
-        this.imagemSobremesa = imagemSobremesa;
+public class Sobremesa implements Parcelable {
+    private String nomeRestaurante;
+    private String enderecoRestaurante;
+    private String horarioRestaurante;
+    private int imagemRestaurente;
+
+    public Sobremesa(String nomeRestaurante, String enderecoRestaurante, String horarioRestaurante, int imagemRestaurente) {
+        this.nomeRestaurante = nomeRestaurante;
+        this.enderecoRestaurante = enderecoRestaurante;
+        this.horarioRestaurante = horarioRestaurante;
+        this.imagemRestaurente = imagemRestaurente;
     }
 
-    public String getNomeSobremesa() { return nomeSobremesa; }
+    public String getNomeRestaurante() {
+        return nomeRestaurante;
+    }
 
-    public void setNomeSobremesa(String nomeSobremesa) { this.nomeSobremesa = nomeSobremesa; }
+    public void setNomeRestaurante(String nomeRestaurante) {
+        this.nomeRestaurante = nomeRestaurante;
+    }
 
-    public String getEnderecoSobremesa() { return enderecoSobremesa; }
+    public Sobremesa(){};
 
-    public void setEnderecoSobremesa(String enderecoSobremesa) { this.enderecoSobremesa = enderecoSobremesa; }
+    public String getEnderecoRestaurante() {
+        return enderecoRestaurante;
+    }
 
-    public String getHorarioSobremesa() { return horarioSobremesa; }
+    public void setEnderecoRestaurante(String enderecoRestaurante) {
+        this.enderecoRestaurante = enderecoRestaurante;
+    }
 
-    public void setHorarioSobremesa(String horarioSobremesa) { this.horarioSobremesa = horarioSobremesa; }
+    public String getHorarioRestaurante() {
+        return horarioRestaurante;
+    }
 
-    public int getImagemSobremesa() { return imagemSobremesa; }
+    public void setHorarioRestaurante(String horarioRestaurante) {
+        this.horarioRestaurante = horarioRestaurante;
+    }
 
-    public void setImagemSobremesa(int imagemSobremesa) { this.imagemSobremesa = imagemSobremesa; }
+    public int getImagemRestaurente() {
+        return imagemRestaurente;
+    }
 
+    public void setImagemRestaurente(int imagemRestaurente) {
+        this.imagemRestaurente = imagemRestaurente;
+    }
 
     protected Sobremesa(Parcel in) {
-        nomeSobremesa = in.readString();
-        enderecoSobremesa = in.readString();
-        horarioSobremesa = in.readString();
-        imagemSobremesa = in.readInt();
+        nomeRestaurante = in.readString();
+        enderecoRestaurante = in.readString();
+        horarioRestaurante = in.readString();
+        imagemRestaurente = in.readInt();
     }
 
     public static final Creator<Sobremesa> CREATOR = new Creator<Sobremesa>() {
@@ -58,9 +76,9 @@ public class Sobremesa implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(nomeSobremesa);
-        dest.writeString(enderecoSobremesa);
-        dest.writeString(horarioSobremesa);
-        dest.writeInt(imagemSobremesa);
+        dest.writeString(nomeRestaurante);
+        dest.writeString(enderecoRestaurante);
+        dest.writeString(horarioRestaurante);
+        dest.writeInt(imagemRestaurente);
     }
 }

@@ -1,13 +1,9 @@
 package br.elas.no.sobremesasapp.view;
-
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Timer;
 import java.util.TimerTask;
-
 import br.elas.no.sobremesasapp.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -25,7 +21,6 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, 2000);
     }
-
     private void jump() {
         timer.cancel();
         startActivity(new Intent(SplashActivity.this, LoginActivity.class));

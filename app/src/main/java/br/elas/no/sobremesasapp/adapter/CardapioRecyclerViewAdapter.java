@@ -1,19 +1,16 @@
 package br.elas.no.sobremesasapp.adapter;
-
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import br.elas.no.sobremesasapp.R;
 import br.elas.no.sobremesasapp.interfaces.CardapioListener;
 import br.elas.no.sobremesasapp.model.Cardapio;
-import br.elas.no.sobremesasapp.view.CardapioFragment;
 
 public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRecyclerViewAdapter.ViewHolder>{
 
@@ -29,7 +26,7 @@ public class CardapioRecyclerViewAdapter extends RecyclerView.Adapter<CardapioRe
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.item_cardapio, parent, false);
+                inflate(R.layout.item_cardapio_recycler_view, parent, false);
 
         return new ViewHolder(view);
     }

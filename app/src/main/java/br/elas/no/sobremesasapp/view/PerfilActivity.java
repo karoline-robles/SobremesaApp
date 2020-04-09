@@ -1,5 +1,4 @@
 package br.elas.no.sobremesasapp.view;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import br.elas.no.sobremesasapp.MainActivity;
+
 import br.elas.no.sobremesasapp.R;
 
 public class PerfilActivity extends AppCompatActivity {
@@ -29,9 +28,7 @@ public class PerfilActivity extends AppCompatActivity {
                 toast.show();
             }
         });
-
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -43,12 +40,10 @@ public class PerfilActivity extends AppCompatActivity {
         }
         return true;
     }
-
     @Override
     public void onBackPressed(){
         startActivity(new Intent(this, MainActivity.class));
         finishAffinity();
         return;
     }
-
 }

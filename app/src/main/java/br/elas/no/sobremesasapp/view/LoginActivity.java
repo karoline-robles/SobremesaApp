@@ -3,10 +3,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
-import br.elas.no.sobremesasapp.MainActivity;
+
 import br.elas.no.sobremesasapp.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -19,31 +18,36 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        email = findViewById(R.id.textEmail);
-        senha = findViewById(R.id.textSenhaLogin);
-        botaoEntrar = findViewById(R.id.button_login);
+        initViews();
 
         botaoEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String email1 = email.getText().toString();
-                String senha1 = senha.getText().toString();
-
-                validarEmailSenha(email1, senha1);
+                if (validaCampos()) {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    finish();
+                }
             }
         });
     }
-    private boolean validarEmailSenha(String emailInput, String senhaInput) {
-        if (emailInput.isEmpty() && senhaInput.isEmpty()) {
-            email.setError("Preencha os campos!");
-            senha.setError("Preencha os campos!");
-            return false;
-        } else {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-            return true;
+
+    private void initViews() {
+    email = findViewById(R.id.inputEmail);
+    senha = findViewById(R.id.InputSenha);
+    botaoEntrar = findViewById(R.id.button_login);
+}
+    private boolean validaCampos() {
+        String email1 = email.getText().toString();
+        String senha1 = senha.getText().toString();
+
+            if (email1.isEmpty() && email1.isEmpty()) {
+                email.setError("Preencha os campos!");
+                senha.setError("Preencha os campos!");
+                return false;
+            } else {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                return true;
+            }
         }
     }
-
-}
